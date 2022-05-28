@@ -9,8 +9,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
-    "lint": "eslint .",
-    "fix": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "jest": {
     "preset": "jest-expo"
@@ -51,7 +51,8 @@
     "jest-expo": "~45.0.0",
     "prettier": "^2.6.2",
     "react-test-renderer": "17.0.2",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "husky": "^8.0.0"
   },
   "resolutions": {
     "@types/react": "^17"
