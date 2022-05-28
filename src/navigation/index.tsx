@@ -74,7 +74,7 @@ function BottomTabNavigator() {
                 opacity: pressed ? 0.5 : 1,
               })}
             >
-              <FontAwesome name='info-circle' size={25} color={Colors[colorScheme].text} style={{ marginRight: 15 }} />
+              <FontAwesome name='info-circle' size={25} color={Colors[colorScheme].text} />
             </Pressable>
           ),
         })}
@@ -95,5 +95,5 @@ function BottomTabNavigator() {
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
 function TabBarIcon(props: { name: React.ComponentProps<typeof FontAwesome>['name']; color: string }) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />
+  return <FontAwesome size={30} {...props} />
 }
