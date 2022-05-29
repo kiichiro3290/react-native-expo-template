@@ -1,41 +1,45 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ButtonNative, ButtonNativeProps } from './Button'
 
-import { Button } from './Button'
+// export const ButtonNativeStories = {
+//   title: 'native/ButtonNative',
+//   compoent: ButtonNative,
+// }
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+// const Template = (args: ButtonProps) => <ButtonNative {...args} />
+
+// export const PrimaryA = Template.bind({})
+// PrimaryA.args = {
+//   color: 'blue',
+//   title: 'Primary Args',
+// }
+
+// export const LongPrimaryA = Template.bind({})
+// LongPrimaryA.args = {
+//   ...PrimaryA.args,
+//   title: 'Long Primary Args',
+// }
+
+// export const SecondaryA = Template.bind({})
+// SecondaryA.args = {
+//   color: 'red',
+//   title: 'Secondary Args',
+// }
+
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+
 export default {
-  title: 'Example/Button',
-  component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof Button>
+  title: 'native/ButtonNative',
+  component: ButtonNative,
+} as ComponentMeta<typeof ButtonNative>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
-
-export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+const Template: ComponentStory<typeof ButtonNative> = (args) => <ButtonNative {...args} />
+const defaultArgs: ButtonNativeProps = {
+  color: 'red',
+  title: 'button-native',
+  age: 12,
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  label: 'Button',
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  size: 'large',
-  label: 'Button',
-}
-
-export const Small = Template.bind({})
-Small.args = {
-  size: 'small',
-  label: 'Button',
-}
+export const Default = Template.bind({})
+Default.storyName = 'ButtonNative'
+Default.args = defaultArgs
